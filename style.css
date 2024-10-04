@@ -7,19 +7,19 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4C9950;
-    color: white;
+    background-color: #D3D3D3; /* Light gray */
+    color: black; /* Changed text color to black */
     border: none;
     border-radius: 5px;
     box-shadow: 0 4px #999;
 }
 
 button:hover {
-    background-color: #499949;
+    background-color: #C0C0C0; /* Slightly darker gray for hover effect */
 }
 
 button:active {
-    background-color: #459999;
+    background-color: #A9A9A9; /* Even darker gray for active state */
     box-shadow: 0 2px #666;
     transform: translateY(2px);
 }
