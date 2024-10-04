@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frasi Casuali</title>
+    <title>Barzellette</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #dedc6f;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px #999;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:active {
+            background-color: #45a049;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
         }
         #message {
             display: none;
@@ -22,20 +40,17 @@
     <div id="message"></div>
 
     <script>
-        const phrases = [
-            "Ecco la frase che volevi vedere!",
-            "La vita è bella!",
-            "Ogni giorno è una nuova opportunità.",
-            "Segui i tuoi sogni.",
-            "Fai del tuo meglio!"
-        ];
+        async function readTextFile(file) {
+            const response = await fetch(file);
+            const text = await response.text();
+            return text.split('\n');
+        }
 
-        function showMessage() {
-            // Seleziona una frase casuale
+        async function showMessage() {
+            const phrases = await readTextFile('barzellette.txt');
             const randomIndex = Math.floor(Math.random() * phrases.length);
-            const message = phrases[randomIndex];
+            const message = phrases[randomIndex].trim();
 
-            // Mostra la frase
             const messageElement = document.getElementById('message');
             messageElement.textContent = message;
             messageElement.style.display = 'block';
