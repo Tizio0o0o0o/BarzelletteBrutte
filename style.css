@@ -7,7 +7,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #4C9950;
     color: white;
     border: none;
     border-radius: 5px;
@@ -15,11 +15,11 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #499949;
 }
 
 button:active {
-    background-color: #45a049;
+    background-color: #459999;
     box-shadow: 0 2px #666;
     transform: translateY(2px);
 }
