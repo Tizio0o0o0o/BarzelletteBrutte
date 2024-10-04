@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frasi Casuali</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dedc6f;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showMessage()">Genera Barzelletta</button>
+    <div id="message"></div>
+
+    <script>
+        const phrases = [
+            "Ecco la frase che volevi vedere!",
+            "La vita è bella!",
+            "Ogni giorno è una nuova opportunità.",
+            "Segui i tuoi sogni.",
+            "Fai del tuo meglio!"
+        ];
+
+        function showMessage() {
+            // Seleziona una frase casuale
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const message = phrases[randomIndex];
+
+            // Mostra la frase
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = message;
+            messageElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
