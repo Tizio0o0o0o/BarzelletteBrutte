@@ -27,7 +27,15 @@ button {
     box-shadow: 0 4px #999;
 }
 
+button:hover {
+    background-color: #1C86EE;
+}
 
+button:active {
+    background-color: #1C86EE;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
 
 #jokeDisplay {
 	margin-top: 20px;
