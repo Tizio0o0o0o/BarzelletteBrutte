@@ -30,3 +30,11 @@ button:active {
     font-size: 20px;
     color: #333;
 }
+
+/* Aggiungi questo codice alla fine del file style.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Imposta l'altezza della pagina uguale all'altezza della viewport */
+}
