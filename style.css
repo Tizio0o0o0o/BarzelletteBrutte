@@ -37,4 +37,5 @@ button:active {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Imposta l'altezza della pagina uguale all'altezza della viewport */
+    flex-direction: column; /* Dispone il contenuto in colonna */
 }
