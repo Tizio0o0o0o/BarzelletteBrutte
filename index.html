@@ -1,31 +1,33 @@
- <!DOCTYPE html>
- <html lang="it">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Barzellette Brutte</title>
-     <link rel="stylesheet" type="text/css" href="style.css">
- </head>
- <body>
-     <button onclick="showMessage()">Genera Barzelletta</button>
-     <div id="message"></div>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barzellette Brutte</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="showMessage()">Genera Barzelletta</button>
+        <div id="message"></div>
+    </div>
 
-     <script>
-         async function readTextFile(file) {
-             const response = await fetch(file);
-             const text = await response.text();
-             return text.split('\n');
-         }
+    <script>
+        async function readTextFile(file) {
+            const response = await fetch(file);
+            const text = await response.text();
+            return text.split('\n');
+        }
 
-         async function showMessage() {
-             const phrases = await readTextFile('barzellette.txt');
-             const randomIndex = Math.floor(Math.random() * phrases.length);
-             const message = phrases[randomIndex].trim();
+        async function showMessage() {
+            const phrases = await readTextFile('barzellette.txt');
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const message = phrases[randomIndex].trim();
 
-             const messageElement = document.getElementById('message');
-             messageElement.textContent = message;
-             messageElement.style.display = 'block';
-         }
-     </script>
- </body>
- </html>
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = message;
+            messageElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
