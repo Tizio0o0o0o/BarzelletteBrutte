@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #cfad25; /* Cambia il colore di sfondo a giallo pastello */  /* altro colore esadecimale: FFCC00*/
+    background-color: #cfad25; /* Cambia il colore di sfondo a giallo pastello */  /* altro colore esadecimale: FFCC00 */
 }
 
 button {
@@ -29,6 +29,8 @@ button:active {
     margin-top: 20px;
     font-size: 20px;
     color: #333;
+    text-align: center; /* Aggiunge centratura al testo del messaggio */
+    width: 100%; /* Assicura che il messaggio prenda tutta la larghezza del contenitore */
 }
 
 .container {
