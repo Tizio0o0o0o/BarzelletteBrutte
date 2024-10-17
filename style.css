@@ -31,11 +31,20 @@ button:active {
     color: #333;
 }
 
-/* Aggiungi questo codice alla fine del file style.css */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Imposta l'altezza della pagina uguale all'altezza della viewport */
     flex-direction: column; /* Dispone il contenuto in colonna */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: justify;
+    margin-top: 10px;
 }
