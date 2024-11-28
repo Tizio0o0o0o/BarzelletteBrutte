@@ -7,18 +7,18 @@
     <meta name="description" content="barzellette brutte divertenti freddure squallide.">
     <title>Barzellette Brutte – Battute divertenti in un click</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/images/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="Barzellette Brutte">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://barzellettebrutte.it">
-    <meta property="og:image" content="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/Logo.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/images/Logo.jpg">
     <meta property="og:description" content="Barzellette Brutte, freddure e battute divertenti">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "url": "https://barzellettebrutte.it",
-      "logo": "https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/favicon.ico"
+      "logo": "https://raw.githubusercontent.com/AmazingCreatures/BarzelletteBrutte/main/images/favicon.ico"
     }
     </script>
 </head>
@@ -42,7 +42,7 @@
         }
 
         async function showMessage() {
-            const phrases = await readTextFile('barzellette.txt');
+            const phrases = await readTextFile('content/barzellette.txt');
             const randomIndex = Math.floor(Math.random() * phrases.length);
             const message = phrases[randomIndex].trim();
 
