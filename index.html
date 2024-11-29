@@ -42,7 +42,7 @@
         }
 
         async function showMessage() {
-            const phrases = await readTextFile('content/barzellette.txt');
+            const phrases = await readTextFile('barzellette.txt');
             const randomIndex = Math.floor(Math.random() * phrases.length);
             const message = phrases[randomIndex].trim();
 
