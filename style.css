@@ -105,3 +105,45 @@ h2 {
 .side-menu a:hover {
     color: #f1f1f1;
 }
+
+.book-entry {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.book-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.book-image.left {
+    order: 1;
+}
+
+.book-image.right {
+    order: 2;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.book-title:hover {
+    text-decoration: underline;
+}
+
+.book-description {
+    font-size: 16px;
+    color: #666;
+}

@@ -18,6 +18,7 @@ async function readTextFile(file) {
         }
         // Legge il contenuto del file come testo
         const text = await response.text();
+        console.log('File content:', text); // Log del contenuto del file
         // Divide il testo in un array di frasi, separando per ogni nuova linea
         return text.split('\n');
     } catch (error) {
