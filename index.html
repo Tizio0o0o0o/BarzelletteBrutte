@@ -50,13 +50,26 @@
     <script src="script.js"></script>
     <script>
         async function readTextFile(file) {
-            const response = await fetch(file);
-            const text = await response.text();
-            return text.split('\n');
+            try {
+                const response = await fetch(file);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const text = await response.text();
+                return text.split('\n');
+            } catch (error) {
+                console.error('Error fetching the file:', error);
+                return [];
+            }
         }
 
         async function showMessage() {
             const phrases = await readTextFile('barzellette.txt');
+            if (phrases.length === 0) {
+                document.getElementById('message').textContent = 'Errore nel caricamento delle barzellette.';
+                document.getElementById('message').style.display = 'block';
+                return;
+            }
             const randomIndex = Math.floor(Math.random() * phrases.length);
             const message = phrases[randomIndex].trim();
 
