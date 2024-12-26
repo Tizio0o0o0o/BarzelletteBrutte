@@ -22,7 +22,21 @@
     }
     </script>
 </head>
+
 <body>
+    <!-- Menù in alto a sx -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div id="side-menu" class="side-menu">
+        <a href="index.html">Home</a>
+        <a href="libri.html">Libri</a>
+        <a href="merchandise.html">Merchandise</a>
+    </div>
+
+    <!-- Resto del contenuto -->
     <div class="container">
         <div class="title-subtitle">
             <h1>Barzellette Brutte</h1>
@@ -33,23 +47,6 @@
             <div id="message"></div>
         </div>
     </div>
-
-    <script>
-        async function readTextFile(file) {
-            const response = await fetch(file);
-            const text = await response.text();
-            return text.split('\n');
-        }
-
-        async function showMessage() {
-            const phrases = await readTextFile('barzellette.txt');
-            const randomIndex = Math.floor(Math.random() * phrases.length);
-            const message = phrases[randomIndex].trim();
-
-            const messageElement = document.getElementById('message');
-            messageElement.textContent = message;
-            messageElement.style.display = 'block';
-        }
-    </script>
 </body>
+<script src="script.js"></script>
 </html>
